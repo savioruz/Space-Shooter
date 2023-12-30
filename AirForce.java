@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class AirForce extends Actor
+public class AirForce extends Plane
 {
     private int pause = 0;
     private int health;  
     public int hold = 10;
 
-    public void control(){
+    public void move(){
         if(Greenfoot.isKeyDown("up")) {
             setLocation(getX(), getY() -4);
         }
@@ -42,7 +42,7 @@ public class AirForce extends Actor
     public void act()
     {
         hold--;
-        control();
+        move();
         if (pause > 0) pause--;
         if (pause == 1)
         if (pause == 0) pause -= 20;
