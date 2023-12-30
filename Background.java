@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Background extends World
 {
-    private int pause = 0;
     private int score;
     private int health = 3;
     private int time;
@@ -19,7 +18,6 @@ public class Background extends World
      */
     public Background()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 800, 1); 
         showHealth();
         showScore();
@@ -34,7 +32,7 @@ public class Background extends World
 
         if (health == 0) {
             Greenfoot.stop();
-            addObject(new Lose(), 300, 400);
+            addObject(new Defeat(), 300, 400);
         }
     }
 
@@ -57,7 +55,7 @@ public class Background extends World
         
         if (time == 0) {
             Greenfoot.stop();
-            addObject(new Win(), 300, 400);
+            addObject(new Victory(), 300, 400);
         }
     }
 
@@ -66,7 +64,7 @@ public class Background extends World
     }
 
     public void act() {
-        if (Greenfoot.getRandomNumber(600) < 3) {
+        if (Greenfoot.getRandomNumber(600) < 5) {
             addObject(new Enemy(), Greenfoot.getRandomNumber(getWidth()), 600);
         }
         countTime();

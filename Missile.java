@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Missile extends Actor
+public class Missile extends Attack
 {
     public void move() {
         setLocation(getX(), getY()-5);
@@ -25,9 +25,9 @@ public class Missile extends Actor
             removeTouching(Enemy.class);
         }
 
-        if (isTouching(EnemyAtk.class)) {
+        if (isTouching(Laser.class)) {
             getWorld().addObject(new Damage(), getX(), getY());
-            removeTouching(EnemyAtk.class);
+            removeTouching(Laser.class);
         }
     }
 

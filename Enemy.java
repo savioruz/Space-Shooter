@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Enemy extends Actor
+public class Enemy extends Plane
 {
     public int hold = 30;
     private int pause = 0;
 
     public void move () {
-        setLocation(getX(), getY()+1);
+        setLocation(getX(), getY()+3);
         if (getY() > 600) {
             setLocation(Greenfoot.getRandomNumber(600),
              Greenfoot.getRandomNumber(50));
@@ -33,7 +33,7 @@ public class Enemy extends Actor
             pause--;
         }
         if (pause == 1) {
-            getWorld().addObject(new EnemyAtk(), getX(), getY()+40);
+            getWorld().addObject(new Laser(), getX(), getY()+40);
         }
         if (pause == 0) {
             pause = 120;
