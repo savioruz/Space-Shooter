@@ -8,10 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Plane
 {
-    public int hold = 30;
+    private int hold = 30;
     private int pause = 0;
 
-    public void move () {
+    protected void move () {
         setLocation(getX(), getY()+3);
         if (getY() > 600) {
             setLocation(Greenfoot.getRandomNumber(600),

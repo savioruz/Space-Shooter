@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Plane extends Actor
 {
-    public abstract void move();
+    protected abstract void move();
     /**
      * Act - do whatever the Plane wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

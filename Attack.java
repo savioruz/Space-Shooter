@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Attack extends Actor
 {
-    public abstract void move();
-    public abstract void checkDamage();
+    protected abstract void move();
+    protected abstract void checkDamage();
     /**
      * Act - do whatever the Attack wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

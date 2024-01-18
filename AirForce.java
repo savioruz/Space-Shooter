@@ -12,7 +12,7 @@ public class AirForce extends Plane
     private int health;  
     public int hold = 10;
 
-    public void move(){
+    protected void move(){
         if(Greenfoot.isKeyDown("up")) {
             setLocation(getX(), getY() -4);
         }

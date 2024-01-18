@@ -10,7 +10,7 @@ public class Laser extends Attack
 {
     private int health;    
 
-    public void move() {
+    protected void move() {
         setLocation(getX(), getY()+5);
         if (getY() > 790) {
             getWorld().removeObject(this);
@@ -19,7 +19,7 @@ public class Laser extends Attack
         }
     }
     
-    public void checkDamage() {
+    protected void checkDamage() {
         if (isTouching(AirForce.class)) {
             getWorld().addObject(new Damage(), getX(), getY());
             Background bg = (Background) getWorld();
